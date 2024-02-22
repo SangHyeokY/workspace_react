@@ -6,13 +6,13 @@ function App() {
   //★state 변수★
   //title -> 첫번째 글  /  setTitle -> ' '
   let [title, setTitle] = useState(['리액트 학습', '울산 맛집', '겨울 코드 추천']);
-
   //좋아요 저장하는 useState 변수
   //setLikeCnt : Setter / 이걸 바꿔야 화면에 바뀐 점이 반영된다.
   let [likeCnt, setLikeCnt] = useState([0, 0, 0]);
-
   //Detail 숨기기/보이기
   let [isShow, setIsShow] = useState(false);
+  //input 태그에 입력한 값을 저장하고 있는 state 변수
+  let [newTitle, setNewtitle] = useState('');
 
   return (
     <div className="App">
@@ -31,10 +31,25 @@ function App() {
       {
         title.map((e, i) => {
           return (
-            <List setIsShow={setIsShow} key={i} title={e} likeCnt={likeCnt} idx={i} setLikeCnt={setLikeCnt}/>
+            <List setIsShow={setIsShow} key={i} title={title} likeCnt={likeCnt} 
+            idx={i} setLikeCnt={setLikeCnt} setTitle={setTitle}/>
           );
         })
       }
+
+      <div>
+        <input type='text' onChange={(e) => {
+          //input 태그에 입력한 값을 출력
+          console.log(e.target.value)
+          setNewtitle(e.target.value)
+        }} />
+        <input type='button' value={'저장'} onClick={(e) => {
+          //배열에 값 넣기
+          let copyTitle = [...title];
+          copyTitle.unshift(newTitle);
+          setTitle(copyTitle);
+        }} />
+      </div>
 
       {/* if문은 삼항연산자로 표현 */}
       {
@@ -52,12 +67,19 @@ function List(props) {
     <div className='list'>
       <h4><span onClick={() => {
         props.setIsShow(true);
-      }}>{props.title}</span> <span onClick={() => {
+      }}>{props.title[props.idx]}</span> 
+      {/* <span onClick={() => {
         let copyLikeCnt = [...props.likeCnt];
         copyLikeCnt[props.idx]++;
         props.setLikeCnt(copyLikeCnt);
-      }}>👍</span> {props.likeCnt[props.idx]} </h4>
+      }}>👍</span> {props.likeCnt[props.idx]}  */}
+      </h4>
       <p>2월 19일 작성</p>
+      <button type='button' onClick={(e) => {
+        let copyTitle = [...props.title];
+        copyTitle.splice(props.idx, 1);
+        props.setTitle(copyTitle);
+      }}>삭제</button>
     </div>
   );
 }
