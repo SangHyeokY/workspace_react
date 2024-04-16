@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+}
+
+.result-div {
+  width: 300px;
+  background-color: #dbdbdb;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: left;
+  padding: 8px;
+}
+
+.result-div > div {
+  margin-bottom: 6px;
+}
+
+/* 컨테이너 */
+.container {
+  width: 300px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* 상단 */
+.count-div {
+  background-color: #e9e9e9;
+  height: 12vh;
+  border-radius: 10px;
+  padding: 21px;
+}
+
+/* 하단 */
+.counting-div {
+  background-color: #e9e9e9;
+  height: 3vh;
+  border-radius: 10px;
+  padding: 21px;
+  margin-top: 10px;
+}
