@@ -5,6 +5,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import mockData from './components/mockData';
 import ItemList from './components/itemList';
 
+
 // 페이지 이동과 같은 기능 : Router 설치
 // 1. npm install react-router-dom@6
 // 2. 설치 후 index.js에서 세팅
@@ -23,13 +24,19 @@ function App() {
   // useNavigate 선언
   const navigate = useNavigate();
 
-  // @ 비동기 @
-  // const [data, setData] = useState([]);
-  // useEffect(() => {
-  //   axios.get('https://jsonplaceholder.typicode.com/posts')
-  //     .then((response) => { setData(response.data) });
-  // }, []);
-  // console.log(`받아온 데이터 수 : ${data.length}`);
+  // 구조분해할당 : 배열, 객체
+
+  // 데이터 박스
+
+
+  function moreData() {
+    axios.get('https://codingapple1.github.io/shop/data2.json')
+      .then(response => {
+        setItemList([...itemList, ...response.data]);
+      })
+      .catch(error => { console.log(error) });
+  }
+
 
   return (
     <div className="App">
@@ -62,9 +69,9 @@ function App() {
       {/* 라우터 연습 */}
       <Routes>
         {/* 상품목록 */}
-        <Route path='/' element={<ItemList itemList={itemList} />} />
+        <Route path='/' element={<ItemList itemList={itemList} moreData={moreData}/>} />
         {/* 상세정보 */}
-        <Route path='/detail/:id' element={<ItemDetail />} />
+        <Route path='/detail/:id' element={<ItemDetail itemList={itemList} />} />
       </Routes>
 
       {/* 링크 연습 */}
@@ -74,7 +81,6 @@ function App() {
       {/* navigate(1) : 앞으로 이동 */}
       {/* navigate(-1) : 뒤로 이동 */}
       <button className='btn btn-success' onClick={() => navigate('/detail')}>상세페이지로 이동</button>
-
 
     </div>
   );

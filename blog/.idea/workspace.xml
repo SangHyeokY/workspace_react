@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c32b882c-3b42-4894-846d-809b8f251acc" name="변경" comment="" />
+    <list default="true" id="c32b882c-3b42-4894-846d-809b8f251acc" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/../ReactCarManager/src/main/java/com/green/ReactCarManager/controller/BoardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReactCarManager/src/main/java/com/green/ReactCarManager/service/BoardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReactCarManager/src/main/java/com/green/ReactCarManager/service/BoardServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReactCarManager/src/main/java/com/green/ReactCarManager/vo/BoardVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReactCarManager/src/main/resources/log4jdbc.log4j2.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReactCarManager/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReactCarManager/src/main/resources/mapper/mapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reactBoard/src/main/java/com/green/reactBoard/controller/AxiosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactBoard/src/main/front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactBoard/src/main/front/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactBoard/src/main/front/src/BoardList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactBoard/src/main/front/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../reactBoard/src/main/front/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactBoard/src/main/java/com/green/reactBoard/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../reactBoard/src/main/java/com/green/reactBoard/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactBoard/src/main/java/com/green/reactBoard/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../reactBoard/src/main/java/com/green/reactBoard/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactBoard/src/main/java/com/green/reactBoard/service/BoardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../reactBoard/src/main/java/com/green/reactBoard/service/BoardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reactBoard/src/main/resources/mapper/mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../reactBoard/src/main/resources/mapper/mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shop/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../shop/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/components/ItemDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../shop/src/components/ItemDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/components/item.js" beforeDir="false" afterPath="$PROJECT_DIR$/../shop/src/components/item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/components/itemList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../shop/src/components/itemList.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,10 +31,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2eexIBcaxJRjmwgqGkWTGNZdI8y" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -24,7 +45,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/01-STUDY/dev/workspace_java/StreamStudy"
+    "last_opened_file_path": "D:/01-STUDY/dev/workspace_react/reactBoard"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />

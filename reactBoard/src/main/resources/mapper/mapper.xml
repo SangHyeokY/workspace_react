@@ -17,6 +17,43 @@
         SELECT * FROM BOARD
     </select>
 
+    <!-- 게시글 작성 -->
+    <insert id="insertBoard">
+        INSERT INTO BOARD (
+            TITLE
+            , WRITER
+            , CONTENT
+        ) VALUES (
+            #{title}
+            , #{writer}
+            , #{content}
+        )
+    </insert>
+
+    <!-- 게시글 하나 불러오기 -->
+    <select id="selectDetail" resultMap="board">
+        SELECT WRITER
+            , TITLE
+            , CONTENT
+            , CREATE_DATE
+            , READ_CNT
+        FROM BOARD
+        WHERE BOARD_NUM = #{boardNum}
+    </select>
+
+    <!-- 조회수 -->
+    <update id="updateReadCnt">
+        UPDATE BOARD
+        SET READ_CNT = READ_CNT +1
+        WHERE BOARD_NUM = #{boardNum}
+    </update>
+
+    <!-- 삭제하기 -->
+    <delete id="deleteBoard">
+        DELETE FROM BOARD
+        WHERE BOARD_NUM = #{boardNum}
+    </delete>
+
 </mapper>
 
 
